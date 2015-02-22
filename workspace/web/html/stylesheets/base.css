@@ -100,7 +100,7 @@
 	blockquote cite:before { content: "\2014 \0020"; }
 	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
 
-	hr { max-width: 400px; border: solid #334d66; opacity: 1; border-width: 2px; clear: both; margin-left: auto; margin-right: auto; margin-bottom: 20px; height: 0; }
+	hr { max-width: 400px; border: solid #DE1B1B; opacity: 1; border-width: 2px; clear: both; margin-left: auto; margin-right: auto; margin-bottom: 20px; height: 0; }
 	hr.white { max-width: 400px; border: solid #fff; opacity: 1; border-width: 2px; clear: both; margin-left: auto; margin-right: auto; margin-bottom: 20px; height: 0; }
 	hr.black { max-width: 400px; border: solid #000; opacity: 1; border-width: 2px; clear: both; margin-left: auto; margin-right: auto; margin-bottom: 20px; height: 0; }
 
