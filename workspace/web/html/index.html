@@ -37,12 +37,14 @@
 	<script type="text/javascript" src="javascripts/jquery.prettyPhoto.js"></script>
 	<script type="text/javascript" src="javascripts/jquery.quicksand.js"></script> 
 	<script type="text/javascript" src="javascripts/script.js"></script> 
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	
 	<!-- SMOOTH SCROLLING -->
 	<script type="text/javascript" src="javascripts/smoothscroll.js"></script>
 	
 	<!-- Tables -->
-	<script type="text/javascript" src="javascripts/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.dataTables.js"></script>
+	
 	<link rel="stylesheet" href="stylesheets/jquery.dataTables.css">
 
 	<!--[if lt IE 9]>
@@ -51,15 +53,31 @@
 
 	<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="images/47_logo_small_grey.gif">
+	<link rel="shortcut icon" href="images/logos/ssvb_primary_logo.png">
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 	<script type="text/javascript">
 		$(document).ready(function() {
-			console.debug("jQuery works.");
-			$("#leaguesTable").DataTable(); 
-		}); 
+			$("#leaguesTable").DataTable(
+				{
+					"columns": [
+   						{ "width": "15%" },
+						{ "width": "10%" },
+						{ "width": "10%" },
+						{ "width": "15%" },
+						{ "width": "10%" },
+						{ "width": "15%" },
+						{ "width": "15%" },
+						{ "width": "10%" }
+					],
+  					"pageLength": 8,
+  					"autoWidth": false,
+  					/* Disable initial sort */
+        			"aaSorting": []
+				}); 
+		}); 		
+      
 	</script>
 	
 
@@ -77,7 +95,7 @@
 		<div class="one columns logo center">
 			<img src="./images/logos/ssvb_primary_logo.png" height="120px" width="120px" alt"">
 		</div>
-		<div class="fifteen columns navigation">
+		<div class="sixteen columns navigation">
 			<nav>
 				<div class='rmm' data-menu-style = "minimal">
 					<ul>
@@ -87,10 +105,10 @@
 						<li><a href='#tourneys'>TOURNEYS</a></li>
 						<li><a href='#clinics'>CLINICS</a></li>
 						<li><a href='#locations'>LOCATIONS</a></li>
-						<li><a href='#about'>ABOUT</a></li> 
+						<li><a href='#registration'>REGISTER</a></li> 
 						<li><a href='#contact'>CONTACT</a></li> 
 					</ul>
-				</div>
+			</div>
 			</nav>
 		</div>
 	</div>     
@@ -103,7 +121,8 @@
 				<li style="height:100%;">
 					<div class="sixteen columns slide1">
 						<h1 class="black">Strong Side Volleyball</h1>						
-						<p class="black center">Denver, Colorado</p>
+						<p class="black center">Denver, Colorado
+						<br/>Elev 5280 ft</p>
 						<hr>
 						<p class="center"><img src="images/logos/ssvb_primary_logo.png" height="250px" alt="logo big"></p>
 					</div>
@@ -131,9 +150,9 @@
 <div class="outer leagues" id="leagues">
     <div class="inner">
         <div class="intro">
-			<h2 class="black">Sand Volleyball Leagues</h2>
+			<h2 class="black">Coed Volleyball Leagues</h2>
 			<hr>
-			<p class="black center">Details on all SSVB Leagues are below.  Check back frequently as more leagues are always being added.</p>         
+			<p class="black center">Details on all SSVB Leagues are below.  Check back frequently as more leagues are added periodically.</p>         
 		</div>
 		<div class="content">
 			<table id="leaguesTable" class="tablesorter">
@@ -141,7 +160,7 @@
 					<tr>
 						<th>Night</th>
 						<th>Format</th>
-						<th>Composition</th>
+						<th>Start Date</th>
 						<th>Times</th>
 						<th>Games</th>						
 						<th>Length</th>
@@ -153,8 +172,8 @@
 					<tr>
 						<td>Tuesday</td>
 						<td>Fours</td>
-						<td>Coed</td>
-						<td>6/7/8/9pm</td>
+						<td>4/14/2015</td>
+						<td>6,7,8,9 pm</td>
 						<td>3 to 25</td>
 						<td>8 Games</td>
 						<td>$200/team</td>
@@ -163,8 +182,8 @@
 					<tr>
 						<td>Wednesday</td>
 						<td>Fours</td>
-						<td>Coed</td>
-						<td>6/7/8/9pm</td>
+						<td>4/15/2015</td>
+						<td>6,7,8,9 pm</td>
 						<td>3 to 25</td>
 						<td>8 Games</td>
 						<td>$200/team</td>
@@ -173,8 +192,8 @@
 					<tr>
 						<td>Thursday</td>
 						<td>Fours</td>
-						<td>Coed</td>
-						<td>6/7/8/9pm</td>
+						<td>4/16/2015</td>
+						<td>6,7,8,9 pm</td>
 						<td>3 to 25</td>
 						<td>8 Games</td>
 						<td>$200/team</td>
@@ -183,8 +202,8 @@
 					<tr>
 						<td>Tuesday</td>
 						<td>Sixes</td>
-						<td>Coed</td>
-						<td>6/7/8/9pm</td>
+						<td>4/14/2015</td>
+						<td>6,7,8,9 pm</td>
 						<td>3 to 25</td>
 						<td>8 Games</td>
 						<td>$240/team</td>
@@ -193,8 +212,8 @@
 					<tr>
 						<td>Wednesday</td>
 						<td>Sixes</td>
-						<td>Coed</td>
-						<td>6/7/8/9pm</td>
+						<td>4/15/2015</td>
+						<td>6,7,8,9 pm</td>
 						<td>3 to 25</td>
 						<td>8 Games</td>
 						<td>$240/team</td>
@@ -203,8 +222,8 @@
 					<tr>
 						<td>Thursday</td>
 						<td>Sixes</td>
-						<td>Coed</td>
-						<td>6/7/8/9pm</td>
+						<td>4/16/2015</td>
+						<td>6,7,8,9 pm</td>
 						<td>3 to 25</td>
 						<td>8 Games</td>
 						<td>$240/team</td>
@@ -216,322 +235,101 @@
     </div>
 </div>
 
-
-
-<div class="schedules" id="schedules">
-    <div class="container">
-    
-        <div class="sixteen columns">
-        
-         <h2>League Schedules</h2>
-         <hr>
-         <p class="center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-         
-         <div class="four columns alpha member">
-         <img id="zoom" class="center scale-with-grid" src="./images/team/team.jpg">
-         <h4>Jane Doe</h4>
-         <h6>Founder / CEO</h6>
-         <p class="center">Lorem ipsum dolor sit  sadipscing elitr, sed diam.</p>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/facebook.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/google.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/twitter.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/behance.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/linkedin.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/dribbble.svg" alt=""></a>
-         </div>
-         
-         <div class="four columns alpha member">
-         <img id="zoom" class="center scale-with-grid" src="./images/team/team.jpg">
-         <h4>Jane Doe</h4>
-         <h6>Web Designer</h6>
-         <p class="center">Lorem ipsum dolor sit  sadipscing elitr, sed diam.</p>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/facebook.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/google.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/twitter.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/behance.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/linkedin.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/dribbble.svg" alt=""></a>
-         </div>
-         
-         <div class="four columns alpha member">
-         <img id="zoom" class="center scale-with-grid" src="./images/team/team.jpg">
-         <h4>Jane Doe</h4>
-         <h6>Designer</h6>
-         <p class="center">Lorem ipsum dolor sit  sadipscing elitr, sed diam.</p>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/facebook.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/google.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/twitter.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/behance.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/linkedin.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/dribbble.svg" alt=""></a>
-         </div>
-         
-         <div class="four columns alpha omega member">
-         <img id="zoom" class="center scale-with-grid" src="./images/team/team.jpg">
-         <h4>Jane Doe</h4>
-         <h6>Developer</h6>
-         <p class="center">Lorem ipsum dolor sit  sadipscing elitr, sed diam.</p>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/facebook.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/google.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/twitter.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/behance.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/linkedin.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/dribbble.svg" alt=""></a>
-         </div>
-         
-         </div>
-        
-    </div>
+<div class="outer schedules" id="schedules">
+	<div class="inner" style="margin-bottom:25px;">
+		<div class="intro">
+			<h2 class="black">League Schedules</h2>
+			<hr>
+			<p class="black center">This is a placeholder for game schedules.</p>
+		</div>         	
+	</div>	
 </div>
 
-
-
-<div class="tourneys" id="tourneys">
-    <div class="container">
-    
-        <div class="sixteen columns">
-        
-         <h2 class="white">Tournament Information</h2>
-         <hr class="white">
-         <p class="white center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-         
-         
-         <ul id="skillbar">
-			    <h4>HTML</h4>
-	            <li><span class="skillbar html"></span></li>
-	            <h4>CSS</h4>
-	            <li><span class="skillbar css"></span></li>
-	            <h4>JAVASCRIPT</h4>
-	            <li><span class="skillbar java"></span></li>
-	            <h4>PHP</h4>
-	            <li><span class="skillbar php"></span></li>
-	            <h4>PHOTOSHOP/ILLUSTRATOR</h4>
-	            <li><span class="skillbar psd"></span></li>
-            </ul>
-         
-         </div>
-        
-    </div>
+<div class="outer tourneys" id="tourneys">
+	<div class="inner" style="margin-bottom:25px;">
+		<div class="intro">
+			<h2 class="black">Tournaments</h2>
+			<hr>
+			<p class="black center">This is a placeholder for information about tournaments.</p>
+		</div>         	
+	</div>
 </div>
 
-
-
-<div class="clinics" id="clinics">
-
-<div class="container">
-
-   <div class="sixteen columns">
-
-        <h2>Clinic Information</h2>
-         <hr>
-         <p class="center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-            
-   <!-- Category Filter -->
-
-	<ul class="filter group"> 
-		<li class="current all"><a href="#">All</a></li> 
-		<li class="webdesign"><a href="#">Webdesign</a></li> 
-		<li class="branding"><a href="#">Branding</a></li> 
-		<li class="printdesign"><a href="#">Printdesign</a></li>  
-	</ul> 
-
-   </div>
-   
-<div class="sixteen columns">
-	<!-- Portfolio Items -->
-	<ul class="portfolio"> 
-		<li  data-id="id-1" data-type="webdesign">
-			<a href="images/portfolio/1.png" rel="prettyPhoto[portfolio]"><img src="images/portfolio/1.png" class="scale-with-grid hov" alt="" /></a>
-		</li> 
-		<li  data-id="id-2" data-type="webdesign">
-			<a href="images/portfolio/1.png" rel="prettyPhoto[portfolio]"><img src="images/portfolio/1.png" class="scale-with-grid hov" alt="" /></a>
-		</li>
-		<li data-id="id-3" data-type="webdesign branding">
-			<a href="images/portfolio/1.png" rel="prettyPhoto[portfolio]"><img src="images/portfolio/1.png" class="scale-with-grid hov" alt="" /></a>
-		</li>
-		<li data-id="id-4" data-type="webdesign branding">
-			<a href="images/portfolio/1.png" rel="prettyPhoto[portfolio]"><img src="images/portfolio/1.png" class="scale-with-grid hov" alt="" /></a>
-		</li>
-		<li data-id="id-5" data-type="branding">
-			<a href="images/portfolio/1.png" rel="prettyPhoto[portfolio]"><img src="images/portfolio/1.png" class="scale-with-grid hov" alt="" /></a>
-		</li>
-		<li data-id="id-6" data-type="printdesign">
-			<a href="images/portfolio/1.png" rel="prettyPhoto[portfolio]"><img src="images/portfolio/1.png" class="scale-with-grid hov" alt="" /></a>
-		</li>
-	</ul>
-   </div>
-  </div>
-</div>
-
-
-
-<div class="about" id="about">
-
-<div class="container">
-
-   <div class="sixteen columns intro">
-
-        <h2 class="white">About Strongside Volleyball</h2>
-         <hr class="white">
-         <p class="white center">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-         
-   </div>
-         
-          <div class="one-third column pricetable">
-         <table class="pritab">
-           <tr>
-            <th>Basic Price</th>
-           </tr>
-           <tr>
-            <td class="cell price">15 EUR<p>per month</p></td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>5 GB</strong> Disk Space</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>20 GB</strong> Bandwith</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>5</strong> Databases</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>Daily</strong> Backup</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>5</strong> Domains</td>
-           </tr>
-           <tr>
-            <td class="order"><a href=""  class="btnprice">Order now</a></td>
-           </tr>
-         </table>         
-  </div>
-  
-  <div class="one-third column pricetable feature">
-         <table class="pritab">
-           <tr>
-            <th>Feature Price</th>
-           </tr>
-           <tr>
-            <td class="cell price">25 EUR<p>per month</p></td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>15 GB</strong> Disk Space</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>50 GB</strong> Bandwith</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>15</strong> Databases</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>Daily</strong> Backup</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>15</strong> Domains</td>
-           </tr>
-           <tr>
-            <td class="order-feat"><a href=""  class="btnpricefeat">Order now</a></td>
-           </tr>
-         </table>
-  </div>
-  
-  <div class="one-third column pricetable">
-         <table class="pritab">
-           <tr>
-            <th>Expert Price</th>
-           </tr>
-           <tr>
-            <td class="cell price">40 EUR<p>per month</p></td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>20 GB</strong> Disk Space</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>60 GB</strong> Bandwith</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>20</strong> Databases</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>Daily</strong> Backup</td>
-           </tr>
-           <tr>
-            <td class="cell"><strong>20</strong> Domains</td>
-           </tr>
-           <tr>
-            <td class="order"><a href=""  class="btnprice">Order now</a></td>
-           </tr>
-         </table>
-  </div>
-          
-
-  </div>
+<div class="outer clinics" id="clinics">
+	<div class="inner" style="margin-bottom:25px;">
+		<div class="intro">
+			<h2 class="black">Clinics</h2>
+			<hr>
+			<p class="black center">This is a placeholder for information about clinics.</p>
+		</div>         	
+	</div>
 </div>
 
 <!-- GOOGLE MAP -->
-
-<div id="locations">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3069.4347280691745!2d-104.93375026979868!3d39.70741187059925!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7c2b751ebadd%3A0x486dc886f8aae848!2s4500+E+Virginia+Ave%2C+Denver%2C+CO+80246!5e0!3m2!1sen!2sus!4v1424405789980" width="100%" height="450" frameborder="0" style="border:0"></iframe>	
+<div class="outer locations" id="locations">
+	<div class="inner" style="margin-bottom:25px;">
+		<div class="intro">
+			<h2 class="black">Our Locations</h2>
+			<hr>
+			<p class="black center">Come join us for games, drinks, and fun.</p>
+		</div>         	
+	</div>
+	<div class="inner secondary" style="margin-bottom:25px;">
+		<div id="map-canvas" style="width:100%;height:450px;">		
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3069.4461111650844!2d-104.934394!3d39.707156!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c7c2b751ebadd%3A0x486dc886f8aae848!2s4500+E+Virginia+Ave%2C+Denver%2C+CO+80246!5e0!3m2!1sen!2sus!4v1424651474218" frameborder="0" style="border:0; width:100%; height:450px;"></iframe>	
+		</div>
+	</div>	
 </div>
-
 <!-- GOOGLE MAP END -->
 
-<div class="contact" id="contact">
+<div class="outer registration" id="registration">
+	<div class="inner" style="margin-bottom:25px;">
+		<div class="intro">
+			<h2 class="black">Registration</h2>
+			<hr>
+			<p class="black center">This is a placeholder for a league registration form.</p>
+		</div>         	
+	</div>
+</div>
 
-<div class="container">
-
-   <div class="sixteen columns">
-
-        <h2 class="white" >Get in Touch</h2>
-         <hr class="white" >
-         <p class="center white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-    
-    </div>
-         
-       <div class="two-thirds column form">
-                 <form action="#" id="commentForm" method="post" name="commentForm">
-                       <input class="required name" id="name" name="name" type="text" value="Name*" onFocus="if(this.value=='Name*') this.value=''"/>
-                       <input class="required email" id="email" name="email" type="text" value="Email*" onFocus="if(this.value=='Email*') this.value=''"/>
-                       <input class="phone" id="phone" name="phone" type="text" value="Phone" onFocus="if(this.value=='Phone') this.value=''"/>
-                       <input class="website" id="website" name="website" type="text" value="Website" onFocus="if(this.value=='Website') this.value=''"/>
-                       <textarea class="required message" name="message" onFocus="if(this.value=='Message*') this.value=''">Message*</textarea>
-                       <button class="btn">Send</button>
-                       <p class="white">Required fields are marked *</p>
-                  </form>
-       </div>
-       
-       <div class="one-third column omega coninfo">
-         <h4 class="left white">Contact Informations</h4>
-         <p class="white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod erat.</p>
-         <ul>
-          <li>Flat OWL One Page Template</li>
-          <li>Lorum Ipsum Street 19</li>
-          <li>61234 Lorum City</li>
-          <li>+49 xxxx 123456789</li>
-          <li><a href="mailto:">info@lorumipsum.com</a></li>
-         </ul>
-         <h4 class="left white">Follow Us</h4>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/facebook.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/google.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/twitter.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/behance.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/linkedin.svg" alt=""></a>
-         <a class="social" href="" alt=""><img class="scale-with-grid" src="./images/icons/social/dribbble.svg" alt=""></a>
-         </div>
-   
+<div class="outer contact" id="contact">
+	<div class="inner">
+		<div class="intro">
+			<h2 class="black" >Get in Touch</h2>
+			<hr>
+			<p class="black center">For further information regarding open leagues or any of our other programs, please fill out the questionnaire below.</p>
+		</div>
+        <div class="container">
+			<div class="two-thirds column form">
+				<form action="#" id="commentForm" method="post" name="commentForm">
+					<input class="required name" id="name" name="name" type="text" value="Name*" onFocus="if(this.value=='Name*') this.value=''"/>
+					<input class="required email" id="email" name="email" type="text" value="Email*" onFocus="if(this.value=='Email*') this.value=''"/>
+					<input class="phone" id="phone" name="phone" type="text" value="Phone" onFocus="if(this.value=='Phone') this.value=''"/>					
+					<textarea class="required message" name="message" onFocus="if(this.value=='Message*') this.value=''">Message*</textarea>
+					<div class="btn" style="float:left;"><a href="#">SEND</a></div>
+					<div class="content black" style="float:right;">Required fields are marked *</div>
+				</form>
+			</div>
+			<div class="one-third column omega coninfo">
+				<h4 class="left black">Our Contact Information:</h4>
+				<p class="black">Strong Side Volleyball is owned and managed by Brian Coleman</p>
+				<ul class="content">
+					<li>5215 S Ukraine St</li>
+					<li>Aurora,  CO  80015</li>
+					<li>720.935.9839</li>
+					<li><a href="mailto:">strongside32@gmail.com</a></li>
+				</ul>
+			</div>
+		</div>
    </div>
 </div>
 
-
-
 <footer>
-  <div class="container">
-      <div class="sixteen columns copyright">
-          
-          <p class="white">Copyright 2015 <a href="http://www.state-machine.technology">Chris Roberton </a>all rights reserved</p>
-          
-      </div>
-  </div>
+	<div>
+		<div class="sixteen columns copyright center">         
+			<p class="white center">Copyright 2015 <a href="http://www.state-machine.technology">State Machine Technology</a> all rights reserved</p>
+		</div>
+	</div>
 </footer>
 
          

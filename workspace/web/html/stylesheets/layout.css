@@ -19,9 +19,15 @@
 
 /* Typography */
 
+@font-face {
+    font-family: 'Custom Font';
+    src: url('../other/credit valley.ttf');
+    /*src: url('../other/4th and Inches.ttf');*/
+}
+
 h1 {
     color: #334d66;
-    font-family: 'Credit Valley', sans-serif;
+    font-family: 'Custom  Font', sans-serif;
     font-weight: 700;
     font-size: 50px;
     margin-bottom: 20px;
@@ -30,7 +36,7 @@ h1 {
 
 h2 {
     color: #334d66;
-    font-family: 'Credit Valley', sans-serif;
+    font-family: 'Custom Font', sans-serif;
     text-align: center;
     font-weight: 700;
     font-size: 40px;
@@ -40,7 +46,7 @@ h2 {
 
 h3 {
     color: #334d66;
-    font-family: 'Credit Valley', sans-serif;
+    font-family: 'Custom Font', sans-serif;
     text-align: center;
     font-weight: 700;
     font-size: 26px;
@@ -50,7 +56,7 @@ h3 {
 
 h4 {
     color: #334d66;
-    font-family: 'Credit Valley', sans-serif;
+    font-family: 'Custom Font', sans-serif;
     text-align: center;
     font-weight: 700;
     font-size: 18px;
@@ -60,14 +66,14 @@ h4 {
 
 h5 {
     color: #334d66;
-    font-family: 'Credit Valley', sans-serif;
+    font-family: 'Custom Font', sans-serif;
     font-weight: 600;
     font-size: 16px;
 }
 
 h6 {
     color: #334d66;
-    font-family: 'Credit Valley', sans-serif;
+    font-family: 'Custom Font', sans-serif;
     text-align: center;
     font-weight: 600;
     font-size: 14px;
@@ -77,7 +83,7 @@ h6 {
 
 p {
     color: #334d66;
-    font-family: 'Credit Valley', sans-serif;
+    font-family: 'Custom Font', sans-serif;
 	font-size: 16px;
 	font-weight: 600;
 	padding-left: 10px;
@@ -87,7 +93,7 @@ p {
 
 .content {
     color: #000000;
-    font-family: 'Credit Valley', sans-serif;
+    font-family: 'Custom Font', sans-serif;
 	font-size: 16px;
 	font-weight: 600;
 	padding-left: 10px;
@@ -96,13 +102,24 @@ p {
 }
 
 .white {
-    font-family: 'Credit Valley', sans-serif;
+    font-family: 'Custom Font', sans-serif;
 	color: #fff;
 }
 
 .black {
-    font-family: 'Credit Valley', sans-serif;
+    font-family: 'Custom Font', sans-serif;
 	color: #000000;
+}
+
+table.dataTable thead th {
+	font-size:18px;
+	font-weight:400;
+}
+
+table.dataTable tr td {
+	font-family: 'Verdana', sans-serif;
+	font-size: 12px;
+	font-weight:400;
 }
 
 .left {
@@ -271,51 +288,34 @@ p {
   }
   
 /* CONTACT FORM BUTTON */
-  
-.btn a{
-  color: #334d66;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400 !important;
-  
+.btn a {
+	display:inline-block;
+	padding:8px 10px 8px 10px;
+	margin:0px 10px 0px -3px;
+	font-size:14px;
+	border: 2px solid #000000;
+	border-radius: 10px;	
+	background-color: #DE1B1B;
+	color:#ffffff;
+	font-weight: 600;
 }
-.btn {
-  color: #334d66 !important;
-  font-family: 'Open Sans', sans-serif;
-  text-decoration: none;
-  font-weight: 700 !important;
-  font-size: 16px;
-  border: none;
-  background: #fff;
-  line-height: 6px;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  margin-right: 20px;
-  padding: 20px 30px;
-  border-bottom-left-radius: 4px 4px;
-  border-bottom-right-radius: 4px 4px;
-  border-top-left-radius: 4px 4px;
-  border-top-right-radius: 4px 4px;
-  }
 
-.btn:hover {
-  color: #fff;
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600 !important;
-  font-size: 16px;
-  border: none;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  margin-right: 20px;
-  padding: 20px 30px;
-  background: #e09224;
-  border-bottom-left-radius: 4px 4px;
-  border-bottom-right-radius: 4px 4px;
-  border-top-left-radius: 4px 4px;
-  border-top-right-radius: 4px 4px;
-  }
+.btn a:hover {
+    border-color: #000;
+    background-color: #334d66;
+}
 
+.copyright a {
+	color: #DE1B1B;	
+	height:22px;
+	text-decoration:none;
+	line-height:1.4em;
+}
 
+.copyright a:hover {
+	color: #334d66;
+	text-decoration:none;	
+}
 
 /* #Page Styles
 ================================================== */
@@ -375,14 +375,6 @@ p {
 	transform: translateY(-50%);
 }
 
-/* #Service */
-
-.service {
-	background-color: #e09224;
-	padding-top: 60px;
-	padding-bottom: 80px;
-}
-
 /* #Floating Background */
 body {
 	background-image: url("../images/backgrounds/net_background.jpg");
@@ -393,7 +385,7 @@ body {
 
 .inner {
     display: table;
-    width: 1050px;
+    width: 1120px;
     margin: 0 auto;
     padding: 25px;
   	background-color: #ffffff;
@@ -420,287 +412,52 @@ header {
 	padding-bottom: 80px;
 }
 
-/* #Team */
-
-.team {
-	background-color: #fff;
+/* #Schedules */
+.schedules {
 	padding-top: 60px;
 	padding-bottom: 80px;
 }
 
-.social img{
-    margin-left: 5px;
-	width: 25px;
-	height: 25px; 
-}
-
-.social:hover{
-	opacity: 0.5;
-}
-
-/* #Skills */
-
-.skills {
-	background-color: #bf5a24;
+/* #Locations */
+.locations {
 	padding-top: 60px;
 	padding-bottom: 80px;
 }
 
-#skillbar { 
-	list-style: none;
-	width: auto;
-	margin: 5px auto 0;
-	position: relative;
-	padding: 5px 0;
+.locations .secondary {
+	padding: 0px;
+	width: 1170px
 }
 
-#skillbar li { 
-	margin-bottom:30px; 
-	background: #fff;  
-	height:40px; 
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;
-	-moz-border-radius-top-right: 20px;
-	-webkit-border-radius-top-right: 20px;
-	-moz-border-radius-bottom-right: 20px;
-	-webkit-border-radius-bottom-right: 20px;   
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
-	-moz-border-radius-top-left: 20px;
-	-webkit-border-radius-top-left: 20px;
-	-moz-border-radius-bottom-left: 20px;
-	-webkit-border-radius-bottom-left: 20px;
-}
-
-#skillbar h4 {
-    color: #fff;
-    text-align: left;
-    margin-left: 10px;
-}
-
-.skillbar { 
-	height:36px; 
-	margin:2px 2px;  
-	position:absolute;
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;
-	-moz-border-radius-top-right: 20px;
-	-webkit-border-radius-top-right: 20px;
-	-moz-border-radius-bottom-right: 20px;
-	-webkit-border-radius-bottom-right: 20px;	
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
-	-moz-border-radius-top-left: 20px;
-	-webkit-border-radius-top-left: 20px;
-	-moz-border-radius-bottom-left: 20px;
-	-webkit-border-radius-bottom-left: 20px;
-}
-
-.html {
-	width:95%; 
-	-moz-animation: html 15s ease-out;
-	-webkit-animation: html 15s ease-out;
-	background-color: #334d66;
-}
-
-.css {
-	width:90%;
-	-moz-animation: css 15s ease-out;
-	-webkit-animation: css 15s ease-out;
-	background-color: #334d66;
-}
-
-.java {
-	width:55%;
-	-moz-animation: java 15s ease-out;
-	-webkit-animation: java 15s ease-out;
-	background-color: #334d66;
-}
-
-.php {
-	width:65%;
-	-moz-animation: php 15s ease-out;
-	-webkit-animation: php 15s ease-out;
-	background-color: #334d66;	
-}
-
-.psd {
-	width:85%;
-	-moz-animation: psd 15s ease-out;
-	-webkit-animation: psd 15s ease-out;
-	background-color: #334d66;	
-}
-
-@-moz-keyframes html {0%  { width:0px;} 100%{ width:95%;}  }
-@-moz-keyframes css        { 0%  { width:0px;} 100%{ width:90%;}  }
-@-moz-keyframes java      { 0%  { width:0px;} 100%{ width:55%;}  }
-@-moz-keyframes php   { 0%  { width:0px;} 100%{ width:65%;}  }
-@-moz-keyframes psd   { 0%  { width:0px;} 100%{ width:85%;}  }
-
-@-webkit-keyframes html       { 0%  { width:0px;} 100%{ width:95%;}  }
-@-webkit-keyframes css        { 0%  { width:0px;} 100%{ width:90%;}  }
-@-webkit-keyframes java      { 0%  { width:0px;} 100%{ width:55%;}  }
-@-webkit-keyframes php   { 0%  { width:0px;} 100% { width:65%;}  }
-@-webkit-keyframes psd   { 0%  { width:0px;} 100% { width:85%;}  }
-
-
-/* #Portfolio */
-
-#portfolio {
-	background-color: #decdb6;
+/* #Clinics */
+.clinics {
 	padding-top: 60px;
 	padding-bottom: 80px;
 }
 
-/* Filter */
-
-.filter li { 
-    float: left; 
-    border: 2px solid #334d66;
-    border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	padding: 6px;
-	margin-left: 10px;
-	margin-bottom: 20px;
-	margin-top: 20px;
-}
-
-.filter {
-	margin-left: 25%; /* change to center fliter menu */
-	margin-bottom: 110px;
-}
-
-.filter a { 
-    padding: 0 10px; 
-    color: #334d66; 
-    text-decoration: none; 
-}
-
-.filter a:hover { 
-    color: #decdb6; 
-}
-
-.filter li:hover { 
-    color: #decdb6; 
-    background: #bf5a24;
-    border: 2px solid #bf5a24;
-    border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	padding: 6px;
-	margin-left: 10px;
-	margin-bottom: 20px;
-	margin-top: 20px;
-}
-
-
-/* Portfolio Items */
-.portfolio li { 
-    float: left; 
-    margin-right: 10px; 
-    margin-bottom: 10px; 
-}
-
-.portfolio li:nth-child(3n) { 
-    margin-right: 0; 
- }
- 
-.portfolio a { 
-    display: block;   
-    text-decoration: none; 
-}
-
-.portfolio img { 
-    max-width: 300px; 
-    max-height: 250px; 
-    display: block;  
-}
-
-/* #Pricing */
-
-#price {
-	background-color: #bf5a24;
+/* #Tourneys */
+.tourneys {
 	padding-top: 60px;
 	padding-bottom: 80px;
 }
 
-.intro {
-	padding-bottom: 20px;
+/* #Registration */
+.registration {
+	padding-top: 60px;
+	padding-bottom: 80px;
 }
-
-.pricetable {
-    max-width: auto; 
-    max-height:400px;
-    padding-bottom: 60px; 
-}
-
-.pritab{
-	display:inline-block;
-    margin-left: auto;
-    margin-right: auto;
-	max-width: auto; 
-	
-    height: auto; 
-    text-align: center !important;
-	margin-bottom: 20px;
-	background-color: #fff;
-	border: 2px solid #000;	
-	border-radius: 20px;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-}
-
-
-th {
-	width:100%;
-	font-size: 30px;
-	font-weight: 700;
-	color: #000000;
-	padding-bottom: 20px;
-	padding-top: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-.cell {
-	height: 30px;
-	line-height: 40px;
-}
-
-.feature {
-	margin-top: -20px;
-}
-
-.price {
-	font-size: 40px;
-	color: #000000;
-	font-weight: 700;
-}
-
-.price p{
-	font-size: 12px;
-	font-weight: 700;
-	text-transform: uppercase;
-}
-
-.order {
-	height: 60px;
-	line-height: 70px;
-}
-
-.order-feat {
-	height: 100px !important;
-	line-height: 110px;
-}
-
 
 /* #Contact */
-
-#contactform {
-	background-color: #334d66;
+.contact {
 	padding-top: 60px;
 	padding-bottom: 80px;
+}
+
+footer {
+	background-color: #2B2B2B;
+	border-top: 5px solid #DE1B1B;
+	padding-top:10px;
+	padding-bottom:25px;
 }
 
 .form input,
@@ -731,41 +488,6 @@ th {
 .form .error {
   color: #bf5a24;
 }
-
-.coninfo ul{
-	list-style: inside circle;
-	color: #fff;
-	padding-left: 10px;
-}
-
-.consocial img{
-    margin-left: 5px;
-	width: 65px;
-	height: 65px;
-	border: 3px solid #fff;
-	border-radius: 65px;
-	-webkit-border-radius: 65px;
-	-moz-border-radius: 65px; 
-}
-
-.consocial:hover{
-	opacity: 0.5;
-}
-
-/* #Footer */
-
-.copyright {
-	text-align: center;
-	font-size: 12px;
-	padding-top: 20px;
-	padding-bottom: 10px;
-}
-
-.copyright a:hover{
-	color: #e09224;
-}
-
-
 
 
 /* #Media Queries

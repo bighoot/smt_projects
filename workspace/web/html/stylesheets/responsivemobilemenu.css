@@ -89,14 +89,14 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 	color: #fff;
 	font-weight: 600;
 }
+
 .rmm.minimal .rmm-main-list li a {
 	display:inline-block;
 	padding:8px 10px 8px 10px;
 	margin:0px 10px 0px -3px;
 	font-size:14px;
 	border: 2px solid #000000;
-	border-radius: 10px;
-	
+	border-radius: 10px;	
 	background-color: #DE1B1B;
 }
 
