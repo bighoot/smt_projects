@@ -86,7 +86,7 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 }
 .rmm.minimal a:hover {
 	opacity:1;
-	color: #fff;
+	color: #ffffff;
 	font-weight: 600;
 }
 
@@ -101,8 +101,9 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 }
 
 .rmm.minimal .rmm-main-list li a:hover {
+    color: #DE1B1B;
     border-color: #000;
-    background-color: #334d66;
+    background-color: #ffffff;
 }
 
 .rmm.minimal .rmm-toggled {

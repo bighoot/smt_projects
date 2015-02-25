@@ -21,7 +21,8 @@
 
 @font-face {
     font-family: 'Custom Font';
-    src: url('../other/credit valley.ttf');
+    src: url('../other/Fight Night.otf');
+    /*src: url('../other/credit valley.ttf');*/
     /*src: url('../other/4th and Inches.ttf');*/
 }
 
@@ -85,7 +86,7 @@ p {
     color: #334d66;
     font-family: 'Custom Font', sans-serif;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 400;
 	padding-left: 10px;
 	padding-right: 10px;
 	line-height: 1.4em;
@@ -95,7 +96,7 @@ p {
     color: #000000;
     font-family: 'Custom Font', sans-serif;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 400;
 	padding-left: 10px;
 	padding-right: 10px;
 	line-height: 1.4em;
@@ -134,6 +135,10 @@ table.dataTable tr td {
 
 .center {
 	text-align: center;
+}
+
+.light {
+	font-weight:200;
 }
 
 .bottom {
@@ -288,7 +293,7 @@ table.dataTable tr td {
   }
   
 /* CONTACT FORM BUTTON */
-.btn a {
+.btn {
 	display:inline-block;
 	padding:8px 10px 8px 10px;
 	margin:0px 10px 0px -3px;
@@ -300,9 +305,11 @@ table.dataTable tr td {
 	font-weight: 600;
 }
 
-.btn a:hover {
+.btn:hover{
+	color: #DE1B1B;
     border-color: #000;
-    background-color: #334d66;
+    background-color: #ffffff;
+    cursor:pointer;
 }
 
 .copyright a {

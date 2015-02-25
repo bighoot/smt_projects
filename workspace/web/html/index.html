@@ -64,10 +64,10 @@
 					"columns": [
    						{ "width": "15%" },
 						{ "width": "10%" },
-						{ "width": "10%" },
+						{ "width": "15%" },
 						{ "width": "15%" },
 						{ "width": "10%" },
-						{ "width": "15%" },
+						{ "width": "10%" },
 						{ "width": "15%" },
 						{ "width": "10%" }
 					],
@@ -76,6 +76,26 @@
   					/* Disable initial sort */
         			"aaSorting": []
 				}); 
+				
+			$("#contact_form_send").click(function() {
+				console.debug("Contact form send button clicked.");
+				
+				var contact_name = encodeURIComponent($('#name').val());
+				var contact_email = encodeURIComponent($('#email').val());
+				var contact_phone = encodeURIComponent($('#phone').val());
+				var contact_message = encodeURIComponent($('#message').val());
+				
+				//console.debug(contact_name);
+				//console.debug(contact_email);
+				//console.debug(contact_phone);
+				//console.debug(contact_message);
+				 
+				var query_string = '?name=' + contact_name + '&email=' + contact_email + '&phone=' + contact_phone + '&message=' + contact_message;
+				
+				//console.debug(query_string);
+				
+				$.get('./php/comment_sender.php' + query_string);
+			});
 		}); 		
       
 	</script>
@@ -120,7 +140,11 @@
 			<ul class="slides">
 				<li style="height:100%;">
 					<div class="sixteen columns slide1">
-						<h1 class="black">Strong Side Volleyball</h1>						
+						<span class="black">
+							<span style="font-style:italic;font-size:70px;">S</span><span style="font-size: 50px;">TRONG</span>
+							<span style="font-style:italic;font-size:70px;">S</span><span style="font-size: 50px;">IDE</span>
+							<span style="font-style:italic;font-size:70px;">V</span><span style="font-size: 50px;">OLLEYBALL</span>
+						</span>						
 						<p class="black center">Denver, Colorado
 						<br/>Elev 5280 ft</p>
 						<hr>
@@ -150,12 +174,16 @@
 <div class="outer leagues" id="leagues">
     <div class="inner">
         <div class="intro">
-			<h2 class="black">Coed Volleyball Leagues</h2>
+			<p class="black center" style="font-weight:400;">
+				<span style="font-style:italic;font-size:70px;">C</span><span style="font-size: 50px;">OED</span>
+				<span style="font-style:italic;font-size:70px;">V</span><span style="font-size: 50px;">OLLEYBALL</span>
+				<span style="font-style:italic;font-size:70px;">L</span><span style="font-size: 50px;">EAGUES</span>
+			</p>
 			<hr>
 			<p class="black center">Details on all SSVB Leagues are below.  Check back frequently as more leagues are added periodically.</p>         
 		</div>
 		<div class="content">
-			<table id="leaguesTable" class="tablesorter">
+			<table id="leaguesTable" class="cell-border hover compact">
 				<thead>
 					<tr>
 						<th>Night</th>
@@ -238,7 +266,10 @@
 <div class="outer schedules" id="schedules">
 	<div class="inner" style="margin-bottom:25px;">
 		<div class="intro">
-			<h2 class="black">League Schedules</h2>
+			<p class="black center" style="font-weight:400;">
+				<span style="font-style:italic;font-size:70px;">L</span><span style="font-size: 50px;">EAGUE</span>
+				<span style="font-style:italic;font-size:70px;">S</span><span style="font-size: 50px;">CHEDULES</span>				
+			</p>
 			<hr>
 			<p class="black center">This is a placeholder for game schedules.</p>
 		</div>         	
@@ -248,7 +279,9 @@
 <div class="outer tourneys" id="tourneys">
 	<div class="inner" style="margin-bottom:25px;">
 		<div class="intro">
-			<h2 class="black">Tournaments</h2>
+			<p class="black center" style="font-weight:400;">
+				<span style="font-style:italic;font-size:70px;">T</span><span style="font-size: 50px;">OURNAMENTS</span>
+			</p>
 			<hr>
 			<p class="black center">This is a placeholder for information about tournaments.</p>
 		</div>         	
@@ -258,7 +291,9 @@
 <div class="outer clinics" id="clinics">
 	<div class="inner" style="margin-bottom:25px;">
 		<div class="intro">
-			<h2 class="black">Clinics</h2>
+			<p class="black center" style="font-weight:400;">
+				<span style="font-style:italic;font-size:70px;">C</span><span style="font-size: 50px;">LINICS</span>
+			</p>
 			<hr>
 			<p class="black center">This is a placeholder for information about clinics.</p>
 		</div>         	
@@ -269,7 +304,10 @@
 <div class="outer locations" id="locations">
 	<div class="inner" style="margin-bottom:25px;">
 		<div class="intro">
-			<h2 class="black">Our Locations</h2>
+			<p class="black center" style="font-weight:400;">
+				<span style="font-style:italic;font-size:70px;">O</span><span style="font-size: 50px;">UR</span>
+				<span style="font-style:italic;font-size:70px;">L</span><span style="font-size: 50px;">OCATIONS</span>				
+			</p>
 			<hr>
 			<p class="black center">Come join us for games, drinks, and fun.</p>
 		</div>         	
@@ -285,7 +323,9 @@
 <div class="outer registration" id="registration">
 	<div class="inner" style="margin-bottom:25px;">
 		<div class="intro">
-			<h2 class="black">Registration</h2>
+			<p class="black center" style="font-weight:400;">
+				<span style="font-style:italic;font-size:70px;">R</span><span style="font-size: 50px;">EGISTRATION</span>
+			</p>
 			<hr>
 			<p class="black center">This is a placeholder for a league registration form.</p>
 		</div>         	
@@ -295,18 +335,21 @@
 <div class="outer contact" id="contact">
 	<div class="inner">
 		<div class="intro">
-			<h2 class="black" >Get in Touch</h2>
+			<p class="black center" style="font-weight:400;">
+				<span style="font-style:italic;font-size:70px;">G</span><span style="font-size: 50px;">ET IN</span>				
+				<span style="font-style:italic;font-size:70px;">T</span><span style="font-size: 50px;">OUCH</span>
+			</p>
 			<hr>
 			<p class="black center">For further information regarding open leagues or any of our other programs, please fill out the questionnaire below.</p>
 		</div>
         <div class="container">
 			<div class="two-thirds column form">
 				<form action="#" id="commentForm" method="post" name="commentForm">
-					<input class="required name" id="name" name="name" type="text" value="Name*" onFocus="if(this.value=='Name*') this.value=''"/>
-					<input class="required email" id="email" name="email" type="text" value="Email*" onFocus="if(this.value=='Email*') this.value=''"/>
-					<input class="phone" id="phone" name="phone" type="text" value="Phone" onFocus="if(this.value=='Phone') this.value=''"/>					
-					<textarea class="required message" name="message" onFocus="if(this.value=='Message*') this.value=''">Message*</textarea>
-					<div class="btn" style="float:left;"><a href="#">SEND</a></div>
+					<input class="required name" id="name" name="name" type="text" value="Name*" onFocus="if(this.value=='Name*') this.value=''" onblur="if(this.value=='') this.value='Name*'"/>
+					<input class="required email" id="email" name="email" type="text" value="Email*" onFocus="if(this.value=='Email*') this.value=''" onblur="if(this.value=='') this.value='Email*'"/>
+					<input class="phone" id="phone" name="phone" type="text" value="Phone" onFocus="if(this.value=='Phone') this.value=''" onblur="if(this.value=='') this.value='Phone'"/>					
+					<textarea class="required message" id="message" name="message" onFocus="if(this.value=='Message*') this.value=''" onblur="if(this.value=='') this.value='Message*'">Message*</textarea>
+					<div id="contact_form_send" class="btn" style="float:left;">SEND</div>
 					<div class="content black" style="float:right;">Required fields are marked *</div>
 				</form>
 			</div>
@@ -327,7 +370,7 @@
 <footer>
 	<div>
 		<div class="sixteen columns copyright center">         
-			<p class="white center">Copyright 2015 <a href="http://www.state-machine.technology">State Machine Technology</a> all rights reserved</p>
+			<p class="white center light">Copyright 2015 <a href="http://www.state-machine.technology">State Machine Technology</a> all rights reserved</p>
 		</div>
 	</div>
 </footer>
