@@ -1,0 +1,7 @@
+.metadata
+.metadata/*
+etc
+RemoteSystemsTempFiles
+web/.settings
+web/.project
+web/__MACOSX
