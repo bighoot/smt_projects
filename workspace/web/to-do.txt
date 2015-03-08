@@ -1,0 +1,55 @@
+ -----------
+ Easy:
+ 1. New Logo
+	a. Use both logos - DONE
+	b. Incorporate the other logos into the section headers or the boxed-area backgrounds - DONE
+	c. Top menu could have one of the main logos and the first picture in the scroller could have the other logo - DONE
+2. Transfer to new domain - DONE
+4. Widen the background image - DONE
+5. New Leagues
+	a. Sunday Doubles Mens 5/3/15 10am-4pm 1.5 hour 4 game to 25, 8 weeks, 100/team - DONE
+	b. Sunday Doubles Women 5/3/15 10am-4pm 1.5 hour 5 games to 25, 8 weeks, 100/team - DONE
+6. Monday rotating pairs tournament 6pm-10pm, round-robin, $10/person, weather permitting - DONE
+7. Clinics
+	a. Friday night "drop-ins" open clinics.  $5/person  630-"bar close" - DONE
+	b. Saturday - DONE
+		1. Individual clinics $30/person for 1.5 hours one-on-one instruction by appointment only (contact Brian Coleman)
+		2. Team clinics $50/team for 1.5 hours one-on-team instruction by appointment only...
+11. Re-enable auto scrolling of the pictures - DONE
+15. Remove the address from the contact information - DONE
+22. Dropdown options on contact form: - DONE
+	1. Appointment for clinics
+	2. Basic information
+	3. Free Agent
+	4. Need a free agent
+ 
+ 
+ -----------
+ Medium
+ 10. The arrows for scrolling the pictures are hidden are not immediately obvious that they can be clicked (hides the other pictures) - OBE
+ 12. Weather-related information right on the front page so that it's super easy to check
+ 17. Free agent information submission - DONE
+	a. Selector on contact form to choose a purpose for the email - DONE
+ 18. On non-landscape rotation of phone browser, the background image only takes up about half of the page and the bottom half is blank - OBE?
+ 3. "Ruggedize" the comments/get in touch part
+ 8. Registration form should include the waiver language at the bottom
+
+
+----------- 
+ Hard
+ 9. Scheduling - High Priority
+	a. Expanding table by league (standings hidden by default?)
+	b. Make easy edits to the schedule, standings, and leagues
+	c. 12 spots for teams per night, per league
+ 13. Information on the weather - forecasts, etc
+	a. weatherchannel.com API?
+	
+	
+-----------	
+Notes	
+14. https://www.hometeamsonline.com/sportswebsites/?
+16. http://web.stanford.edu/group/aerobics/agreement.pdf
+19. thenvl.com - site has really cool testimonial videos
+20. http://www.morningprint.com/product/card.php?acode=75
+21. http://www.gurusistemas.com/_guru/indexdatagrid.php?page=samples
+ 

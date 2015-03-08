@@ -6,10 +6,10 @@ if(isset($_GET['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
  
-    $email_to = "strongside32@gmail.com";
-    //$email_to = "statemachinetech@gmail.com";
+    //$email_to = "strongside32@gmail.com";
+    $email_to = "statemachinetech@gmail.com";
  
-    $email_subject = "Test Email From Comment Sender";
+    $email_subject = "Email From Strong Side Volleyball Website";
  
      
  
@@ -39,8 +39,6 @@ if(isset($_GET['email'])) {
  
         !isset($_GET['email']) ||
  
-        !isset($_GET['phone']) ||
- 
         !isset($_GET['message'])) {
  
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
@@ -56,6 +54,8 @@ if(isset($_GET['email'])) {
     $phone = $_GET['phone']; // not required
  
     $message = $_GET['message']; // required
+    
+    $purpose = $_GET['purpose']; // not required
  
      
  
@@ -101,7 +101,9 @@ if(isset($_GET['email'])) {
  
     }
  
-     
+ 	$purposes = array("general"=>"General information request", "appointment"=>"Clinic appointment request", "imafreeagent"=>"Free agent submission", "needafreeagent"=>"Team in need of a free agent");
+	
+	$translated_purpose = $purposes[$purpose];     
  
     $email_message .= "First Name: ".clean_string($name)."\n";
  
@@ -109,6 +111,8 @@ if(isset($_GET['email'])) {
  
     $email_message .= "Telephone: ".clean_string($phone)."\n";
  
+    $email_message .= "Purpose: ".clean_string($translated_purpose)."\n";
+    
     $email_message .= "Comments: ".clean_string($message)."\n";
  
      

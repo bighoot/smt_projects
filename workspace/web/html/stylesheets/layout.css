@@ -49,7 +49,7 @@ h3 {
     color: #334d66;
     font-family: 'Custom Font', sans-serif;
     text-align: center;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 26px;
     margin-bottom: 5px;
     margin-top: 15px;
@@ -387,7 +387,7 @@ body {
 	background-image: url("../images/backgrounds/net_background.jpg");
 	background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center -300px;
+	background-size:cover;
 }
 
 .inner {
@@ -480,6 +480,17 @@ footer {
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+}
+
+input[type="radio"] {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 10px;
+  height: 20px;
+  width: 40px;
+  margin: 15px 0 0 0;
+  text-align:left;
 }
 
 .form textarea {
