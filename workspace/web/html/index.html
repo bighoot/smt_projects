@@ -97,8 +97,9 @@
 				//console.debug(query_string);
 				
 				$.get('./php/comment_sender.php' + query_string, function( data ) {
-  					$(".result").html(data);
-  					console.debug("Message sent to server.");			
+  					$("#results").html(data);
+  					console.debug("Message sent to server.");	
+  					console.debug(data);		
 				});
 			});
 		}); 		

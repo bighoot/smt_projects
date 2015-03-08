@@ -19,16 +19,15 @@ if(isset($_GET['email'])) {
  
         // your error code can go here
  
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+        echo "<span style=\"color:#DE1B1B;\">We are very sorry, but there were error(s) found with the form you submitted. ";
  
-        echo "These errors appear below.<br /><br />";
+        echo "These errors appear below.<br/><br/>";
  
-        echo $error."<br /><br />";
+        echo $error."<br/>";
  
-        echo "Please go back and fix these errors.<br /><br />";
+        echo "Please go back and fix these errors.<br/><br/></span>";
  
         die();
- 
     }
  
      
@@ -130,17 +129,7 @@ $headers = 'From: '.$email_from."\r\n".
 @mail($email_to, $email_subject, $email_message, $headers);  
  
 ?>
- 
- 
- 
-<!-- include your own success html here -->
- 
- 
- 
 Thank you for contacting us. We will be in touch with you very soon.
- 
- 
- 
 <?php
  
 }
