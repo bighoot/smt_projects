@@ -1,0 +1,28 @@
+League
+	Week
+		Game
+			Home Team
+			Away Team
+			Score?
+			
+			
+Games
+	ID	League	Week	Home Team	Away Team	Location	Date	Time	Score
+	1	1		1		Team A		Team B		Court 1		4/15	7pm		2-1
+	2	1		1		Team C		Team D		Court 2		4/15	7pm		3-1
+	3	1		2		Team A		Team C		Court 1		4/22	7pm		4-3
+	4	1		2		Team B		Team D		Court 2		4/22	7pm		2-5
+	5	1		3		Team A		Team D		Court 1		4/29	7pm		1-0*
+	6	1		3		Team B		Team C		Court 2		4/29	7pm		0-10
+	7	2		1		Team E		Team F		Court 1		4/16	7pm		2-3
+	8	2		1		Team G		Team H		Court 2		4/16	7pm		16-0
+	9	2		2		Team E		Team G		Court 1		4/23	7pm		7-3
+	10	2		2		Team F		Team H		Court 2		4/23	7pm		9-12
+	11	2		3		Team E		Team H		Court 1		4/30	7pm		3-9
+	12	2		3		Team F		Team G		Court 2		4/30	7pm		5-6
+	13	3		1		Team I		Team J		Court 1		4/17	7pm		2-0	
+	14	3		1		Team K		Team L		Court 2		4/17	7pm		5-10
+	15	3		2		Team I		Team K		Court 1		4/24	7pm		12-3
+	16	3		2		Team J		Team L		Court 2		4/24	7pm		16-15
+	17	3		3		Team I		Team L		Court 1		5/1		7pm		3-17
+	18	3		3		Team J		Team K		Court 2		5/1		7pm		12-14

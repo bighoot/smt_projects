@@ -54,7 +54,6 @@ table.dataTable thead .sorting_desc_disabled {
   background: url("../images/icons/desc.gif") no-repeat center right;
 }
 table.dataTable tbody tr {
-  background-color: white;
   text-align:center;
 }
 table.dataTable tbody tr.selected {

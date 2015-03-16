@@ -92,6 +92,14 @@ p {
 	line-height: 1.4em;
 }
 
+#schedule_accordion h3 {
+    color: #ffffff;
+    font-family: 'Custom Font', sans-serif;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+}
+
 .content {
     color: #000000;
     font-family: 'Custom Font', sans-serif;
@@ -112,6 +120,10 @@ p {
 	color: #000000;
 }
 
+#leaguesTable tbody {
+	background-color:#ffffff;
+}
+
 table.dataTable thead th {
 	font-size:18px;
 	font-weight:400;
@@ -121,6 +133,44 @@ table.dataTable tr td {
 	font-family: 'Verdana', sans-serif;
 	font-size: 12px;
 	font-weight:400;
+}
+
+table.schedule_table thead th {
+	font-size:14px;
+	font-weight:400;
+	font-family: 'Custom Font', sans-serif;
+}
+
+table.schedule_table tr td {
+	font-family: 'Custom Font', sans-serif;
+	font-size: 11px;
+	font-weight:400;
+}
+
+.dataTables_paginate {
+	font-family: 'Verdana', sans-serif;
+	font-size: 12px;
+	font-weight:400;
+}
+
+table.schedule_table .dataTables_paginate {
+	color: #ffffff;
+}
+
+.dataTables_filter {
+	font-family: 'Verdana', sans-serif;
+	font-size: 12px;
+	font-weight:400;
+}
+
+.dataTables_info {
+	font-family: 'Verdana', sans-serif;
+	font-size: 12px;
+	font-weight:400;
+}
+
+.strip1, .strip3 {
+	background-color: #dddddd;
 }
 
 .left {
@@ -415,19 +465,19 @@ header {
 
 /* #Leagues */
 .leagues {
-	padding-top: 60px;
+	padding-top: 20px;
 	padding-bottom: 80px;
 }
 
 /* #Schedules */
 .schedules {
-	padding-top: 60px;
+	padding-top: 20px;
 	padding-bottom: 80px;
 }
 
 /* #Locations */
 .locations {
-	padding-top: 60px;
+	padding-top: 20px;
 	padding-bottom: 80px;
 }
 
@@ -438,25 +488,25 @@ header {
 
 /* #Clinics */
 .clinics {
-	padding-top: 60px;
+	padding-top: 20px;
 	padding-bottom: 80px;
 }
 
 /* #Tourneys */
 .tourneys {
-	padding-top: 60px;
+	padding-top: 20px;
 	padding-bottom: 80px;
 }
 
 /* #Registration */
 .registration {
-	padding-top: 60px;
+	padding-top: 20px;
 	padding-bottom: 80px;
 }
 
 /* #Contact */
 .contact {
-	padding-top: 60px;
+	padding-top: 20px;
 	padding-bottom: 80px;
 }
 

@@ -31,12 +31,16 @@
  17. Free agent information submission - DONE
 	a. Selector on contact form to choose a purpose for the email - DONE
  18. On non-landscape rotation of phone browser, the background image only takes up about half of the page and the bottom half is blank - OBE?
- 3. "Ruggedize" the comments/get in touch part
+ 3. "Ruggedize" the comments/get in touch part - DONE
  8. Registration form should include the waiver language at the bottom
 
 
 ----------- 
  Hard
+ 9-0. Leagues in DB - High Priority
+	a. Leagues in the DB - DONE
+	b. Dynamically load league data from DB - DONE
+	C. Need instructions for Brian to make edits to leagues
  9. Scheduling - High Priority
 	a. Expanding table by league (standings hidden by default?)
 	b. Make easy edits to the schedule, standings, and leagues
