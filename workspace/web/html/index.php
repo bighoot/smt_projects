@@ -187,12 +187,42 @@
 				</li>				
 				<li>
 					<div class="sixteen columns slide2 slidesWithBorder">
-						<p class="center"><img src="images/photos/20150219_114758.jpg" height="400px" alt="logo big"></p>
+						<p class="center"><img src="images/photos/11009142_1589467167966452_663408066738161182_n.jpg" height="400px" alt="logo big"></p>
 					</div>
 				</li>
 				<li>
 					<div class="sixteen columns slide3 slidesWithBorder">
-						<p class="center"><img src="images/photos/20150219_113957.jpg" height="400px" alt="logo big"></p>
+						<p class="center"><img src="images/photos/11081145_1589467364633099_8832557589917620133_n.jpg" height="400px" alt="logo big"></p>
+					</div>
+				</li>
+				<li>
+					<div class="sixteen columns slide4 slidesWithBorder">
+						<p class="center"><img src="images/photos/20150219_114758.jpg" height="400px" alt="logo big"></p>
+					</div>
+				</li>
+				<li>
+					<div class="sixteen columns slide4 slidesWithBorder">
+						<p class="center"><img src="images/photos/10999751_1589467387966430_8612254248560784745_o.jpg" height="400px" alt="logo big"></p>
+					</div>
+				</li>
+				<li>
+					<div class="sixteen columns slide4 slidesWithBorder">
+						<p class="center"><img src="images/photos/1518040_1589470484632787_5085974208756801430_n.jpg" height="400px" alt="logo big"></p>
+					</div>
+				</li>
+				<li>
+					<div class="sixteen columns slide4 slidesWithBorder">
+						<p class="center"><img src="images/photos/10150597_1589100204669815_1924849633645716432_n.jpg" height="400px" alt="logo big"></p>
+					</div>
+				</li>
+				<li>
+					<div class="sixteen columns slide4 slidesWithBorder">
+						<p class="center"><img src="images/photos/10155233_1589466554633180_567753888611222918_n.jpg" height="400px" alt="logo big"></p>
+					</div>
+				</li>
+				<li>
+					<div class="sixteen columns slide4 slidesWithBorder">
+						<p class="center"><img src="images/photos/11069909_1589467441299758_2804336521414738746_n.jpg" height="400px" alt="logo big"></p>
 					</div>
 				</li>
 				<li>
@@ -293,22 +323,22 @@
 		$times_result = mysql_query($times_query);
 		
 		//Print the table column headers
-		$location_iter = 0;
+		$time_iter = 0;
 		$num_locations = mysql_numrows($locations_result);
+		$num_times = mysql_numrows($times_result);
 		
-		while ($location_iter < $num_locations) {
+		while ($time_iter < $num_times) {
 			
-			$time_iter = 0;
-			$num_times = mysql_numrows($times_result);
-			
-			 while ($time_iter < $num_times) {				
+			$location_iter = 0;
+
+			 while ($location_iter < $num_locations) {				
 				
 			 	echo "<th>" . mysql_result($times_result, $time_iter, "time") . "<br/>" . mysql_result($locations_result, $location_iter, "location") . "</th>";
 		
-				$time_iter++;
+				$location_iter++;
 			}
 		
-			$location_iter++;
+			$time_iter++;
 		}
 		
 		echo "</tr></thead>";
@@ -334,29 +364,33 @@
 			echo mysql_result($dates_result, $week_iter, "date");
 			echo "</td>";
 		
-			$location_iter = 0;
-			while ($location_iter < $num_locations) {
+			$time_iter = 0;
+			while ($time_iter < $num_times) {
 			
-				$time_iter = 0;
-				$num_times = mysql_numrows($times_result);
+				$location_iter = 0;
 				
-				 while ($time_iter < $num_times) {
+				 while ($location_iter < $num_locations) {
 				
 					$game_location = mysql_result($locations_result, $location_iter, "location");
+					$game_time = mysql_result($times_result, $time_iter, "time");
 					
-					$game_query = "select home_team, away_team, score from games where league_id = " . $league_id . " and week = " . $week . " and location = \"" . $game_location . "\";"; 
+					$game_query = "select home_team, away_team, score from games where league_id = " . $league_id . " and week = " . $week . " and location = \"" . $game_location . "\"" . " and time = \"" . $game_time . "\";"; 
 					$game_result = mysql_query($game_query);
 					
-					$home_team = mysql_result($game_result, 0, "home_team");
-					$away_team = mysql_result($game_result, 0, "away_team");
-					$score = mysql_result($game_result, 0, "score");
+					if (mysql_numrows($game_result) == 1) {
+						$home_team = mysql_result($game_result, 0, "home_team");
+						$away_team = mysql_result($game_result, 0, "away_team");
+						$score = mysql_result($game_result, 0, "score");
 					
-					echo "<td>" . $home_team . " v " . $away_team . "<br/>" . $score . "</td>";
+						echo "<td>" . $home_team . " v " . $away_team . "<br/>" . $score . "</td>";
+					} else {
+						echo "<td>-</td>";
+					} 
 			
-					$time_iter++;
+					$location_iter++;
 				}
 				
-				$location_iter++;
+				$time_iter++;
 			}
 		
 			echo "</tr>";

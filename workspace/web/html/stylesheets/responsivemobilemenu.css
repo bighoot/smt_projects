@@ -113,7 +113,7 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 .rmm.minimal .rmm-toggled-controls {
 	display:block;
 	height:36px;
-	color:#000;
+	color:#ffffff;
 	font-weight: 600;
 	text-align:left;
 	position:relative;
@@ -123,7 +123,7 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 	top:9px;
 	left:9px;
 	font-size:14px;
-	color:#000;
+	color:#ffffff;
 	font-weight: 600;
 }
 .rmm.minimal .rmm-button {
@@ -137,7 +137,7 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 	display:block;
 	margin:4px 0px 4px 0px;
 	height:2px;
-    background:#000;
+    background:#ffffff;
 	width:25px;
 }
 .rmm.minimal .rmm-toggled ul li a {
@@ -145,12 +145,12 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 	width:100%;
 	text-align:center;
 	padding:10px 0px 10px 0px;
-	border-bottom:1px solid #000;
-	color:#000;
+	border-bottom:1px solid #ffffff;
+	color:#ffffff;
 	font-weight: 600;
 }
 .rmm.minimal .rmm-toggled ul li:first-child a {
-	border-top:1px solid #000;
+	border-top:1px solid #ffffff;
 }
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
