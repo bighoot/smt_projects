@@ -1,3 +1,8 @@
+<?php 
+/* Short and sweet */
+define('WP_USE_THEMES', false);
+require('./blog/wp-blog-header.php');
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -70,26 +75,21 @@
 				}
 			);
 			
-			$("#leaguesTable").DataTable(
-				{
-					"processing": true,
-        			"serverSide": true,
-					"ajax": "./php/leagues.php",
-					"columns": [
-   						{ "width": "13%" },
-						{ "width": "17%" },
-						{ "width": "14%" },
-						{ "width": "14%" },
-						{ "width": "9%" },
-						{ "width": "10%" },
-						{ "width": "10%" },
-						{ "width": "13%" }
-					],
-  					"pageLength": 8,
-  					"autoWidth": false,
-  					/* Disable initial sort */
-        			"aaSorting": []
-				}); 
+			$("#tablepress-1").DataTable( {
+				"columns": [
+					{ "width": "13%" },
+					{ "width": "17%" },
+					{ "width": "14%" },
+					{ "width": "14%" },
+					{ "width": "9%" },
+					{ "width": "10%" },
+					{ "width": "10%" },
+					{ "width": "13%" }
+				],
+				"pageLength": 8,
+				"autoWidth": false,  					
+    			"aaSorting": []
+			}); 
 				
 			$(".schedule_table").DataTable(
 				{
@@ -247,22 +247,7 @@
 			<p class="black center">Details on all SSVB Leagues are below.  Check back frequently as more leagues are added periodically.</p>         
 		</div>
 		<div class="content">
-			<table id="leaguesTable" class="cell-border hover compact">
-				<thead>
-					<tr>
-						<th>Night</th>
-						<th>Format</th>
-						<th>Start Date</th>
-						<th>Times</th>
-						<th>Games</th>						
-						<th>Weeks</th>
-						<th>Cost</th>
-						<th>Registration</th>
-					</tr>
-				</thead>
-				<tbody>					
-				</tbody>
-			</table>		
+			<?php tablepress_print_table( 'id=1&use_datatables=true&print_name=false' ); ?>		
 		</div>		        
     </div>
 </div>
